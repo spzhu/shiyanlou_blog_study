@@ -18,5 +18,6 @@ from article import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url('^home', views.home),
+    url('^$', views.home, name='home'),
+    url('^(?P<id>\d+)/$', views.detail, name='detail'),
 ]
